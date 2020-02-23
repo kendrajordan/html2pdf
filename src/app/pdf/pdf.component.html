@@ -1,0 +1,19 @@
+<div  *ngIf="incident"  #pdfTable1> 
+    <div  style="width:50%; height:50%;" >
+                <table id='pdfTable1'  border='1'cellpadding='5' [innerHTML]='getData(incident)'></table>
+    </div>
+
+    <div> <button  (click)="convert()">Export incident To PDF</button></div>   
+</div>
+
+ <div  *ngIf="safety" #pdfTable2 >
+     <div>
+        <table id='pdfTable2' border="1" cellpadding='5'  [innerHTML]='getSafetyData(safety)'> 
+            pdf works!
+        </table> 
+     </div>
+
+    <div> <button  (click)="convert()">Export safety To PDF</button></div>   
+ </div>   
+
+    
